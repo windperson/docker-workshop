@@ -1,5 +1,9 @@
 Vagrant.configure(2) do |config|
 
+
+	config.vm.provider "virtualbox"
+    config.vm.provider "parallels"
+    config.vm.provider "vmware_fusion"
   #config.vm.box = "ubuntu/trusty64"
   config.vm.box = "williamyeh/ubuntu-trusty64-docker"
 

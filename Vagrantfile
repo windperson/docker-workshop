@@ -15,6 +15,10 @@ PROVISION_SCRIPTS = [ "provision/setup-docker-tools.sh", "provision/setup-env.sh
 
 Vagrant.configure(2) do |config|
 
+    config.vm.provider "virtualbox"
+    config.vm.provider "parallels"
+    config.vm.provider "vmware_fusion"
+
     config.vm.define "main", primary: true do |node|
 
         node.vm.box = "williamyeh/ubuntu-trusty64-docker"
